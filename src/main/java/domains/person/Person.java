@@ -1,4 +1,5 @@
 package domains.person;
+
 import jakarta.persistence.*;
 import lombok.*;
 

@@ -1,10 +1,10 @@
 package domains.peopleSkills;
 
 import domains.person.Person;
+
 import domains.skill.Skill;
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.LocalDate;
 import java.util.UUID;
 
