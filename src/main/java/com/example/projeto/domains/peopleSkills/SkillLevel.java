@@ -1,4 +1,4 @@
-package domains.peopleSkills;
+package com.example.projeto.domains.peopleSkills;
 
 public enum SkillLevel {
 

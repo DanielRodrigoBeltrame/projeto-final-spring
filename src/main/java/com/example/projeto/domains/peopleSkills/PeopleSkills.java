@@ -1,8 +1,8 @@
-package domains.peopleSkills;
+package com.example.projeto.domains.peopleSkills;
 
-import domains.person.Person;
+import com.example.projeto.domains.person.Person;
 
-import domains.skill.Skill;
+import com.example.projeto.domains.skill.Skill;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;

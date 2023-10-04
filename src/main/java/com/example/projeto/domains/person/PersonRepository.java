@@ -1,6 +1,5 @@
-package domains.person;
+package com.example.projeto.domains.person;
 
-import domains.peopleSkills.PeopleSkills;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

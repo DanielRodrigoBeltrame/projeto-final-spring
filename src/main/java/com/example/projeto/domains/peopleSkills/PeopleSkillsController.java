@@ -1,11 +1,11 @@
-package domains.skill;
+package com.example.projeto.domains.peopleSkills;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/skill")
+@RequestMapping("/people-skill")
 @RequiredArgsConstructor
-public class SkillController {
+public class PeopleSkillsController {
 }

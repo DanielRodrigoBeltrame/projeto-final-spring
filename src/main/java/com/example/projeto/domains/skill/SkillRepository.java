@@ -1,4 +1,4 @@
-package domains.skill;
+package com.example.projeto.domains.skill;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

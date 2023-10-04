@@ -1,9 +1,9 @@
-package domains.person;
+package com.example.projeto.domains.skill;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class PersonServiceImpl {
+public class SkillServiceImpl {
 }

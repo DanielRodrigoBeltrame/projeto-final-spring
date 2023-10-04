@@ -1,33 +1,27 @@
-package domains.person;
+package com.example.projeto.domains.skill;
 
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
-@Table(name = "Person")
+@Table(name = "Skill")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Person {
+
+public class Skill {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
     @Column(nullable = false)
-    private String name;
+    private String description;
 
     @Column(nullable = false)
-    private LocalDate birthDate;
+    private String observation;
 
-    @Column(nullable = false)
-    private String identificationDocument;
-
-    @Column(nullable = true)
-    private String email;
 }
