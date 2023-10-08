@@ -5,5 +5,5 @@ import com.example.projeto.interfaces.Crud;
 
 import java.util.UUID;
 
-public interface SkillService extends Crud<SkillDto, UUID> {
+public interface SkillService extends Crud<Skill, UUID> {
 }
