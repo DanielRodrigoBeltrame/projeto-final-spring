@@ -5,5 +5,5 @@ import com.example.projeto.interfaces.Crud;
 
 import java.util.UUID;
 
-public interface PersonService extends Crud<PersonDto, UUID> {
+public interface PersonService extends Crud<Person, UUID> {
 }

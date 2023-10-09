@@ -1,6 +1,9 @@
 package com.example.projeto.domains.peopleSkills;
 
 import com.example.projeto.domains.peopleSkills.dto.PeopleSkillsDto;
+import com.example.projeto.domains.skill.Skill;
+import com.example.projeto.utils.ErrorMessages;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,24 +13,29 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class PeopleSkillsServiceImpl implements PeopleSkillsService {
+
+    private final PeopleSkillsRepository peopleSkillsRepository;
     @Override
-    public List<PeopleSkillsDto> findAll() {
-        return null;
+    public List<PeopleSkills> findAll() {
+        return peopleSkillsRepository.findAll();
     }
 
     @Override
-    public PeopleSkillsDto findById(UUID id) {
-        return null;
+    public PeopleSkills findById(UUID id) {
+        return peopleSkillsRepository.findById(id).orElseThrow(
+                () -> new EntityNotFoundException(ErrorMessages.PEOPLESKILLS_NOT_FOUND));
     }
 
     @Override
-    public PeopleSkillsDto save(PeopleSkillsDto request) {
-        return null;
+    public PeopleSkills save(PeopleSkills request) {
+        return peopleSkillsRepository.save(request);
     }
 
     @Override
-    public PeopleSkillsDto update(UUID id, PeopleSkillsDto request) {
-        return null;
+    public PeopleSkills update(UUID id, PeopleSkills request) {
+        PeopleSkills peopleSkills = peopleSkillsRepository.findById(id).orElseThrow(
+                () -> new EntityNotFoundException(ErrorMessages.PEOPLESKILLS_NOT_FOUND));
+        return peopleSkillsRepository.save(request);
     }
 
     @Override

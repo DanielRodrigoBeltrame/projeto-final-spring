@@ -1,15 +1,10 @@
 package com.example.projeto.domains.skill;
 
-import com.example.projeto.domains.skill.dto.SkillDto;
 import com.example.projeto.utils.ErrorMessages;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -17,6 +12,7 @@ import java.util.UUID;
 public class SkillServiceImpl implements SkillService {
 
     private final SkillRepository skillRepository;
+
     @Override
     public List<Skill> findAll() {
         return skillRepository.findAll();
