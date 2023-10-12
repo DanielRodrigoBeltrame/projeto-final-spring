@@ -6,7 +6,7 @@ import lombok.*;
 import java.util.UUID;
 
 @Entity
-@Table(name = "Skill")
+@Table(name = "skill")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -26,7 +26,6 @@ public class Skill {
     private String observation;
 
     @ManyToOne
-    @JoinColumn(name = "people_skills_id")
     private PeopleSkills peopleSkills;
 
 }

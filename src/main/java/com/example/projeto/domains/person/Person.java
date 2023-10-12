@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 @Entity
-@Table(name = "Person")
+@Table(name = "person")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -32,6 +32,6 @@ public class Person {
     @Column(nullable = true)
     private String email;
 
-    @ManyToOne
+    @OneToOne(mappedBy = "person")
     private PeopleSkills peopleSkills;
 }

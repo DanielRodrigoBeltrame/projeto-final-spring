@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.UUID;
 
 @Entity
-@Table(name = "PeopleSkills")
+@Table(name = "peopleSkills")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,19 +25,15 @@ public class PeopleSkills {
     private UUID id;
 
     @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private SkillLevel skillLevel;
-
-    @Column(nullable = false)
     private String observation;
 
     @Column(nullable = false)
     private LocalDate dateSkill;
 
-    @ManyToOne
+    @OneToOne
     private Person person;
 
     @OneToMany(mappedBy = "peopleSkills")
-    private Set<Skill> skills = new LinkedHashSet<>();
+    private Set<Skill> skills;
 
 }
