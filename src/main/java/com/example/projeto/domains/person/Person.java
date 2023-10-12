@@ -1,5 +1,6 @@
 package com.example.projeto.domains.person;
 
+import com.example.projeto.domains.peopleSkills.PeopleSkills;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -30,4 +31,7 @@ public class Person {
 
     @Column(nullable = true)
     private String email;
+
+    @ManyToOne
+    private PeopleSkills peopleSkills;
 }

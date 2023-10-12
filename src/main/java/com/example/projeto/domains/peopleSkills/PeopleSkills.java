@@ -6,6 +6,9 @@ import com.example.projeto.domains.skill.Skill;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -22,12 +25,6 @@ public class PeopleSkills {
     private UUID id;
 
     @Column(nullable = false)
-    private Person person;
-
-    @Column(nullable = false)
-    private Skill skill;
-
-    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private SkillLevel skillLevel;
 
@@ -36,5 +33,11 @@ public class PeopleSkills {
 
     @Column(nullable = false)
     private LocalDate dateSkill;
+
+    @ManyToOne
+    private Person person;
+
+    @OneToMany(mappedBy = "peopleSkills")
+    private Set<Skill> skills = new LinkedHashSet<>();
 
 }

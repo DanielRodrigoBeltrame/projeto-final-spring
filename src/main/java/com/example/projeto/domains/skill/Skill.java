@@ -1,5 +1,6 @@
 package com.example.projeto.domains.skill;
 
+import com.example.projeto.domains.peopleSkills.PeopleSkills;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.UUID;
@@ -23,5 +24,9 @@ public class Skill {
 
     @Column(nullable = false)
     private String observation;
+
+    @ManyToOne
+    @JoinColumn(name = "people_skills_id")
+    private PeopleSkills peopleSkills;
 
 }
